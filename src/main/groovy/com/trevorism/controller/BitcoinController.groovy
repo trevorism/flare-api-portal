@@ -5,9 +5,6 @@ import io.micronaut.http.MediaType
 import io.micronaut.http.annotation.Controller
 import io.micronaut.http.annotation.Get
 import io.swagger.v3.oas.annotations.Operation
-import io.swagger.v3.oas.annotations.media.Content
-import io.swagger.v3.oas.annotations.media.Schema
-import io.swagger.v3.oas.annotations.responses.ApiResponse
 import io.swagger.v3.oas.annotations.tags.Tag
 import jakarta.inject.Inject
 
@@ -30,7 +27,6 @@ class BitcoinController {
     def getBlockchainInfo(){
         bitcoinApiClient.invokeBitcoinApi(BitcoinApiClient.GET_BLOCKCHAIN_INFO)
     }
-
 
     @Tag(name = "Bitcoin Operations")
     @Operation(summary = "Returns latest block hash")
