@@ -10,6 +10,7 @@ class LitecoinApiClient {
     static final String GET_NETWORK_INFO = "getnetworkinfo"
     static final String GET_BLOCK = "getblock"
     static final String GET_RAW_TRANSACTION = "getrawtransaction"
+    static final String GET_CHAIN_TIPS = "getchaintips"
 
     @Inject
     ApiPortalClient apiPortalClient

@@ -11,6 +11,7 @@ class BitcoinApiClient {
     static final String GET_BEST_BLOCK_HASH = "getbestblockhash"
     static final String GET_BLOCK = "getblock"
     static final String GET_RAW_TRANSACTION = "getrawtransaction"
+    static final String GET_CHAIN_TIPS = "getchaintips"
 
     @Inject
     ApiPortalClient apiPortalClient

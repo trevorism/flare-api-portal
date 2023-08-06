@@ -2,6 +2,7 @@ package com.trevorism.controller
 
 import com.trevorism.secure.Roles
 import com.trevorism.secure.Secure
+import com.trevorism.service.BitcoinApiClient
 import com.trevorism.service.LitecoinApiClient
 import io.micronaut.http.MediaType
 import io.micronaut.http.annotation.Controller
@@ -40,11 +41,19 @@ class LitecoinController {
         litecoinApiClient.invokeBitcoinApi(LitecoinApiClient.GET_BLOCK, [hash])
     }
 
-    @Tag(name = "Bitcoin Operations")
+    @Tag(name = "Litecoin Operations")
     @Operation(summary = "Gets litecoin transaction info with the given id **Secure")
     @Get(value = "/tx/{txid}", produces = MediaType.APPLICATION_JSON)
     @Secure(value = Roles.USER)
     def getTransactionInfo(String txid){
         litecoinApiClient.invokeBitcoinApi(LitecoinApiClient.GET_RAW_TRANSACTION, [txid, true])
+    }
+
+    @Tag(name = "Litecoin Operations")
+    @Operation(summary = "Returns chain tips **Secure")
+    @Get(value = "/chainTips", produces = MediaType.APPLICATION_JSON)
+    @Secure(value = Roles.USER)
+    def getChainTips(){
+        litecoinApiClient.invokeBitcoinApi(LitecoinApiClient.GET_CHAIN_TIPS)
     }
 }

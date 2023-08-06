@@ -41,6 +41,14 @@ class BitcoinController {
     }
 
     @Tag(name = "Bitcoin Operations")
+    @Operation(summary = "Returns chain tips **Secure")
+    @Get(value = "/chainTips", produces = MediaType.APPLICATION_JSON)
+    @Secure(value = Roles.USER)
+    def getChainTips(){
+        bitcoinApiClient.invokeBitcoinApi(BitcoinApiClient.GET_CHAIN_TIPS)
+    }
+
+    @Tag(name = "Bitcoin Operations")
     @Operation(summary = "Returns latest block hash **Secure")
     @Get(value = "/block/{hash}", produces = MediaType.APPLICATION_JSON)
     @Secure(value = Roles.USER)
