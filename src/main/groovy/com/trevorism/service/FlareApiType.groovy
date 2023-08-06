@@ -7,6 +7,7 @@ class FlareApiType {
     static FlareApiType XRPL = new FlareApiType("xrpl", "https://api.flare.network/xrpl")
     static FlareApiType FLARE = new FlareApiType("flare", "https://api.flare.network/flare")
     static FlareApiType SONGBIRD = new FlareApiType("songbird", "https://api.flare.network/songbird")
+    static FlareApiType FLARE_EXPLORER = new FlareApiType("flare-explorer", "https://api.flare.network/flare-explorer")
 
     final String name
     final String baseUrl

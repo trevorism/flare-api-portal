@@ -24,4 +24,9 @@ class FlareApiPortalClient implements ApiPortalClient {
     HeadersHttpResponse post(FlareApiType apiType, FlareApiRequest flareApiRequest) {
         httpClient.post(apiType.baseUrl, gson.toJson(flareApiRequest), ["x-apikey":apiKey])
     }
+
+    @Override
+    HeadersHttpResponse get(FlareApiType apiType, String url) {
+        httpClient.get(apiType.baseUrl + url, ["x-apikey":apiKey])
+    }
 }

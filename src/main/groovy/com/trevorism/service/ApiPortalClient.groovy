@@ -6,5 +6,5 @@ import com.trevorism.model.FlareApiRequest
 interface ApiPortalClient {
 
     HeadersHttpResponse post(FlareApiType apiType, FlareApiRequest flareApiRequest)
-
+    HeadersHttpResponse get(FlareApiType apiType, String url)
 }
