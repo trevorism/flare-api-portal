@@ -4,5 +4,9 @@
 ![GitHub language count](https://img.shields.io/github/languages/count/trevorism/flare-api-portal)
 ![GitHub top language](https://img.shields.io/github/languages/top/trevorism/flare-api-portal)
 
+Wraps the [Flare api portal](https://api-portal.flare.network/).
+
+Deployed to https://flare-api-portal.trade.trevorism.com
+
 # How to build
 `gradle clean build`

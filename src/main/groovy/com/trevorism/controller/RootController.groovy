@@ -48,15 +48,4 @@ class RootController {
         return HttpResponse.redirect(new URI("swagger-ui/index.html"))
     }
 
-    @Tag(name = "Root Operations")
-    @Operation(summary = "Returns the version of the API")
-    @ApiResponse(
-            responseCode = "200",
-            content = @Content(mediaType = "text/plain",
-                    schema = @Schema(type = "string"))
-    )
-    @Get(value = "/version", produces = MediaType.TEXT_PLAIN)
-    String version() {
-        return "0-0-1"
-    }
 }

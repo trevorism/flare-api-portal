@@ -8,7 +8,6 @@ class LitecoinApiClient {
 
     static final String GET_BLOCKCHAIN_INFO = "getblockchaininfo"
     static final String GET_NETWORK_INFO = "getnetworkinfo"
-    static final String GET_BEST_BLOCK_HASH = "getbestblockhash"
     static final String GET_BLOCK = "getblock"
     static final String GET_RAW_TRANSACTION = "getrawtransaction"
 
