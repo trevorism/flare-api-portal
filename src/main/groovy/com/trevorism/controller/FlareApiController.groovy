@@ -22,7 +22,7 @@ class FlareApiController {
     @Get(value = "/blockNumber", produces = MediaType.APPLICATION_JSON)
     @Secure(value = Roles.USER)
     def getBlockNumber(){
-        flareApiClient.invokeFlareApi(FlareApiClient.GET_ETH_BLOCK_NUMBER,[1])
+        flareApiClient.invokeFlareApi(FlareApiClient.GET_ETH_BLOCK_NUMBER)
     }
 
     @Tag(name = "Flare Operations")
@@ -30,7 +30,7 @@ class FlareApiController {
     @Get(value = "/chainId", produces = MediaType.APPLICATION_JSON)
     @Secure(value = Roles.USER)
     def getChainId(){
-        flareApiClient.invokeFlareApi(FlareApiClient.GET_ETH_CHAIN_ID, [1])
+        flareApiClient.invokeFlareApi(FlareApiClient.GET_ETH_CHAIN_ID)
     }
 
 }

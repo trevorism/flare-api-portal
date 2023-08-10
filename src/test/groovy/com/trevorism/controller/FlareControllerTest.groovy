@@ -12,7 +12,7 @@ class FlareControllerTest {
         FlareApiController flareController = new FlareApiController()
 
         String json = "{\"test\":\"value\"}"
-        flareController.flareApiClient = ["invokeFlareApi":{ x,y -> json}] as FlareApiClient
+        flareController.flareApiClient = ["invokeFlareApi":{ x -> json}] as FlareApiClient
         assert json == flareController.getBlockNumber()
 
         //flareController.flareApiClient = new FlareApiClient()
@@ -24,7 +24,7 @@ class FlareControllerTest {
     void testGetChainId() {
         FlareApiController flareController = new FlareApiController()
         String json = "{\"test\":\"value\"}"
-        flareController.flareApiClient = ["invokeFlareApi":{ x,y -> json}] as FlareApiClient
+        flareController.flareApiClient = ["invokeFlareApi":{ x -> json}] as FlareApiClient
         assert json == flareController.getChainId()
     }
 }
