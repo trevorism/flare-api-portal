@@ -12,20 +12,20 @@ class FlareApiClient {
     @Inject
     ApiPortalClient apiPortalClient
 
-    def invokeFlareApi(String methodName){
+    def invokeFlareApi(FlareApiType type, String methodName){
         def flareApiRequest = new FlareApiRequest()
         flareApiRequest.jsonrpc = "2.0"
         flareApiRequest.id = UUID.randomUUID().toString()
         flareApiRequest.method = methodName
-        apiPortalClient.post(FlareApiType.FLARE, flareApiRequest).value
+        apiPortalClient.post(type, flareApiRequest).value
     }
 
-    def invokeFlareApi(String methodName, List params){
+    def invokeFlareApi(FlareApiType type, String methodName, List params){
         def flareApiRequest = new FlareApiRequest()
         flareApiRequest.jsonrpc = "2.0"
         flareApiRequest.id = UUID.randomUUID().toString()
         flareApiRequest.method = methodName
         flareApiRequest.params = params
-        apiPortalClient.post(FlareApiType.FLARE, flareApiRequest).value
+        apiPortalClient.post(type, flareApiRequest).value
     }
 }

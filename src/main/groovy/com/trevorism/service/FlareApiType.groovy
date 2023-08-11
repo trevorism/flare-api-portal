@@ -6,7 +6,7 @@ class FlareApiType {
     static FlareApiType LITECOIN = new FlareApiType("litecoin", "https://api.flare.network/litecoin")
     static FlareApiType XRPL = new FlareApiType("xrpl", "https://api.flare.network/xrpl")
     static FlareApiType FLARE = new FlareApiType("flare", "https://api.flare.network/flare/bc/C/rpc")
-    static FlareApiType SONGBIRD = new FlareApiType("songbird", "https://api.flare.network/songbird")
+    static FlareApiType SONGBIRD = new FlareApiType("songbird", "https://api.flare.network/songbird/bc/C/rpc")
     static FlareApiType FLARE_EXPLORER = new FlareApiType("flare-explorer", "https://api.flare.network/flare-explorer")
 
     final String name
