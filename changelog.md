@@ -1,3 +1,7 @@
+## 0.6.0
+
+Update dependencies and add support for Java 25, micronaut 5.
+
 ## 0.5.0
 
 Update dependencies and add cors support.

@@ -1,4 +1,4 @@
-runtime: java17
+runtime: java25
 service: flare-api-portal
 entrypoint: java -jar flare-api-portal-all.jar
 handlers:
