@@ -12,11 +12,13 @@ import io.cucumber.groovy.Hooks
 this.metaClass.mixin(Hooks)
 this.metaClass.mixin(EN)
 
+String baseUrl = System.getenv("ACCEPTANCE_BASE_URL") ?: "https://flare-api-portal.trade.trevorism.com"
+
 SecureHttpClient secureHttpClient = new AppClientSecureHttpClient()
 String serverInfo
 
 When(/the server info is requested/) {  ->
-    serverInfo = secureHttpClient.get("https://flare-api-portal.trade.trevorism.com/xrp/serverInfo")
+    serverInfo = secureHttpClient.get("${baseUrl}/xrp/serverInfo")
 }
 
 Then(/the server info is returned/) {  ->
